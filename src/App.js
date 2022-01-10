@@ -204,7 +204,9 @@ export default function AppComponent() {
           Peek into our <HrefUnderline href="https://discord.gg/rXUgFXs4Pz">Discord</HrefUnderline> or follow us on <HrefUnderline href="https://twitter.com/AutomataFinance">Twitter</HrefUnderline> to learn more.
           <br />
           <br />
-          Note: <Code>des-0</Code> has not been audited and is not production ready yet (as of this post).<br />
+          The <Code>des-0</Code> source code is available on <HrefUnderline href="https://github.com/automata-labs/des">GitHub</HrefUnderline>. Built- and tested with <HrefUnderline href="https://github.com/gakonst/foundry">Foundry</HrefUnderline>.
+          <br />
+          <Italic>Note: <Code>des-0</Code> has not been audited and is not production ready yet (as of this post).</Italic>
         </Paragraph>
       </Main>
 
