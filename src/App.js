@@ -137,7 +137,7 @@ export default function AppComponent() {
         <Figure src={Figure0} style={{ marginBottom: '2rem' }} />
         <Paragraph>
           Automata Labs Inc. is releasing a new DAO structure, called <Code>des-0</Code> (DAO Execution System V0).
-          The DAO introduces numerous new features:
+          The <Code>des-0</Code> DAO contract-set introduces numerous new features:
 
           <List>
             <Item>Tokenization of proposals into <Code>ERC721</Code> tokens.</Item>
@@ -151,25 +151,25 @@ export default function AppComponent() {
         <Paragraph>
           Every proposal starts out as a draft proposal. When the proposal is finalized and ready,
           it can be staged, which allows anyone with enough tokens to open the proposal for voting.
-          This approach mirrors and is inspired by that of GitHub. If code is law, why not take
-          inspiration from methodologies in previous version control systems?
+          This approach mirrors and is inspired by git/GitHub's process. If code is law, why not use
+          methodologies from version control systems?
         </Paragraph>
         <Figure src={Figure1} />
         <Caption>Figure: A list of proposals.</Caption>
         <Paragraph>
-          Another change that `des` introduces is to allow DAO members to contest a proposal's result.
-          DAOs today like GovernorAlpha/GovernorBravo has one voting period that is final. This allows
-          for proposals to be sniped last second without a chance for redo, even if on an extended
-          period it would never pass.
+          Another change that's introduced is to allow DAO members to contest a proposal's result.
+          GovernorAlpha/GovernorBravo has one voting period, and the result is final. This allows
+          for proposals to be sniped on the last block, without a chance for redo, even if on an extended
+          period the proposal would not pass.
           <br />
           <br />
           To amend this, we allow anyone to contest a proposal after it passes the first stage of
-          voting. When a proposal is contested, only opposite side will be able to vote, which
-          flips on each contest. The contestations can continue forever, as long as both the for-
+          voting. And when a proposal is contested, only a single side will be able to vote, which
+          flips to the opposite side on each contest. The contestations can continue forever, as long as both the for-
           and against votes' sides keep one-up:ing each other on every contest.
           <br />
           <br />
-          And when one side fails to get majority, the proposal will reach finality. To some degree,
+          When one side fails to get majority during a contestation, the proposal will reach finality. To some degree,
           this can be thought of as longest-chain rule, but for DAOs.
         </Paragraph>
         <Figure src={Figure2} />
@@ -177,16 +177,9 @@ export default function AppComponent() {
 
         <H2>Technicalities, ERC721 and Transaction Messages</H2>
         <Paragraph>
-          Every proposal is tokenized as an ERC721. This allows users to transfer proposals or
-          give approval to contracts or other accounts for proposal collaboration on-chain. This
-          enables fractionalization of the proposal with other protocols like fractional.art
-          to keep track of all contributers and their shares of the proposal. If a reward is
-          to be given out to the contributers, it can be calculated through the fractional
-          shares that they own.
-          <br />
-          <br />
-          To increase the clarification of each proposal, we have added transaction messages
-          to proposals. So not only does the proposal have a description, but also the transactions.
+          Every proposal is tokenized as an ERC721 token. This allows for users to transfer proposals,
+          give approval to contracts or other accounts to enable collaboration on-chain.
+          To increase the clarification of each proposal, each transaction in a proposal also have a message.
         </Paragraph>
         <Figure src={Figure3} />
         <Caption>Figure: An example transaction with a tx message.</Caption>
